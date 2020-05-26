@@ -74,14 +74,16 @@ d)  Accordion 
 <!-- Temporary implementation due to CORS issue -->
 <div id="login_user"></div>
 <script>
+function logout(){
+    localStorage.removeItem('user');
+    document.getElementById("login_user").innerHTML = '<p><a href="login.html">Log in</a></p>';
+}
 if(localStorage.getItem('loggedIn')){
-    document.getElementById("login_user").innerHTML = '<p><a href="profile.html">Profile</a></p>';
+    document.getElementById("login_user").innerHTML = '<p><a href="profile.html">Profile</a><br/><a href="javascript:logout();">Logout</a></p>';
 }else{
     document.getElementById("login_user").innerHTML = '<p><a href="login.html">Log in</a></p>';
 }
-
 </script>
-
     <!--
 b, c)  Text: Use flex boxes
 -->
