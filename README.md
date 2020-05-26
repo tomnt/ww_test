@@ -28,7 +28,7 @@ http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/home.html
  
  - home.html: In progress ...
  - login.html: Implemented
- - profile.html: Not implemented
+ - profile.html: Partially implemented
  - images: Placed
  - jsons: Not placed
 

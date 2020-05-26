@@ -26,8 +26,13 @@ hostname = 'ec2-52-91-132-244.compute-1.amazonaws.com'
                     console.log(data)
                     loggedIn = data['loggedIn']
                     if(loggedIn){
-                        window.location.href = "home.html";
+                        localStorage.setItem('loggedIn', data['loggedIn']);
+                        localStorage.setItem('email', data['results']['email']);
+                        localStorage.setItem('fname', data['results']['fname']);
+                        localStorage.setItem('lname', data['results']['lname']);
+                        //window.location.href = "home.html";
                     }else{
+                        localStorage.removeItem('user');
                         const div = document.getElementById("wrap");
                         div.innerHTML = '<p><font color="red">Log in failed</font></p>';
                     }

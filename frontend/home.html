@@ -3,7 +3,6 @@
 <head>
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
     <!-- amp-state -->
@@ -15,8 +14,6 @@
     <!-- amp-img -->
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-
-
                 <script id="amp-access" type="application/json">
                     {
                         "authorization": "http://localhost/amp/auth/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
@@ -33,9 +30,7 @@
                        }
                    }
                </script>
-
-    <title>Sample title</title>
-    
+    <title>Home</title>
     <link rel="canonical" href="https://amp.dev/ja/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script type="application/ld+json">
@@ -117,14 +112,11 @@ d)  Accordion 
     [data-expand]="sectionOne"
     on="expand:AMP.setState({sectionOne: true});collapse:AMP.setState({sectionOne: false})"
   >
-    
     <h2>Section 1</h2>
     <div>
       <p>Item 1</p>
       <p>Item 2</p>
     </div>
-
-
   </section>
   <section>
     <h2>Section 2</h2>
@@ -136,16 +128,11 @@ d)  Accordion 
 </amp-accordion>
 
 <section amp-access="loggedIn">
-  <p>User Info</p>
-  <p>Name</p>
-  <p>email</p>
+    <a href="profile.html">Profile</a>
 </section>
 <section amp-access="NOT loggedIn">
-  <a href="login.html">Log in</a>
+    <a href="login.html">Log in</a>
 </section>
-
-
-
 <!--
 b, c)  Text: Use flex boxes
 -->
@@ -157,9 +144,6 @@ b, c)  Text: Use flex boxes
   </amp-fit-text>
 </div>
 -->
-
-
-
 <!--
 a)  Hero Carousel
 -->
@@ -169,15 +153,15 @@ a)  Hero Carousel
   type="slides"
   autoplay
   delay="7000"><!-- Speed -->
-  <amp-img src="images/WW-19-VES-THUMB-AURA-GOLD.jpg"
+  <amp-img src="images/WW-19-VES-THUMB-AURA-GOLD.jpg">
     <div class="atsackers">THUMB AURA GOLD
     </div>
     </amp-img>
-  <amp-img src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg"
+  <amp-img src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg">
     <div class="atsackers">WW VES THUMB AURA MATTE BLACK
     </div>
     </amp-img>
-  <amp-img src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg"
+  <amp-img src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg">
     <div class=d"atsackers">WW VESSELS THUMB CERAMIC TERRAIN
     </div>
     </amp-img>
