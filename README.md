@@ -3,7 +3,7 @@
 https://www.getpostman.com/collections/2a79974bacd13e0dfa74
 
 ## Frontend demos
-http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/
+http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/home.html
 
 ## Progress Report
 ### Part 1 - Infrastructure
@@ -26,8 +26,8 @@ http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/
  - amp-img: Implemented
  - amp-bind: Not implemented
  
- - home.html: Implemented as index.html
- - login.html: Not implemented
+ - home.html: In progress ...
+ - login.html: In progress ...
  - profile.html: Not implemented
  - images: Placed
  - jsons: Not placed
