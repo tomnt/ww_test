@@ -9,34 +9,36 @@ https://qiita.com/ekzemplaro/items/d9392b24bc5aa4b4e484
 <meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8" />
 <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
 <script>
+//hostname = 'localhost'
+hostname = 'ec2-52-91-132-244.compute-1.amazonaws.com'
+
 	jQuery(function()
 {
     jQuery('#submit').on('click',function()
         {
+                loggedIn = false
                 jQuery.ajax({
-                    url:'http://localhost:5000/login/',
+                    url:"http://"+hostname+":5000/login/?email="+jQuery('#email').val()+"&password="+jQuery('#password').val(),
                     type:'POST',
-                    data:{
-                        'email': jQuery('#email').val(),
-                        'password': jQuery('#password').val()
-            }
                 })
                 .done(function(data){
                     jQuery('.result').html(data)
                     console.log(data)
-
+                    loggedIn = data['loggedIn']
+                    if(loggedIn){
+                        window.location.href = "home.html";
+                    }else{
+                        const div = document.getElementById("wrap");
+                        div.innerHTML = '<p><font color="red">Log in failed</font></p>';
+                    }
                 })
                 .fail(function(data){
                     jQuery('.result').html(data)
                     console.log(data)
                 })
-                window.location.href = "home.html";
     })
 })
-
-
 </script>
-
 <style>
 .center
 {
@@ -55,9 +57,8 @@ https://qiita.com/ekzemplaro/items/d9392b24bc5aa4b4e484
 </table>
 <p />
 <button id="submit">submit</button>
+<div id="wrap"></div>
 </div>
 <p />
-<div class="result"></div>
-
 </body>
 </html>

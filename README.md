@@ -27,7 +27,7 @@ http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/home.html
  - amp-bind: Not implemented
  
  - home.html: In progress ...
- - login.html: In progress ...
+ - login.html: Implemented
  - profile.html: Not implemented
  - images: Placed
  - jsons: Not placed
