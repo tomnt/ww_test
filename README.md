@@ -15,7 +15,7 @@ http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/
  - Atlas MongoDB: Not deployed (Installed MongoDB on EC2)
 
 ### Part 2 - Front-End
-
+* Not connected with backend(REST API) due to CORS's issue
  - amp-form: Not implemented due to CORS's issue
  - amp-list: Not implemented
  - amp-state: Not implemented
