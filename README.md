@@ -19,7 +19,7 @@ http://ec2-52-91-132-244.compute-1.amazonaws.com/frontend/home.html
  - amp-form: Not implemented due to CORS's issue
  - amp-list: Not implemented
  - amp-state: Not implemented
- - amp-access: Implemented
+ - amp-access: Temporary implemented by JavaScript & cache due to CORS issue
  - amp-mustache: Not implemented
  - amp-carousel: Implemented
  - amp-accordion: Implemented

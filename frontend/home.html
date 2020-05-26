@@ -1,6 +1,7 @@
 <!doctype html>
 <html amp lang="en">
 <head>
+
     <meta charset="utf-8">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
@@ -14,96 +15,31 @@
     <!-- amp-img -->
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
-                <script id="amp-access" type="application/json">
-                    {
-                        "authorization": "http://localhost/amp/auth/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
-                       "pingback": "http://localhost/amp/auth/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
-                       "login": {
-                         "sign-in": "http://localhost/amp/login/?rid=READER_ID&url=CANONICAL_URL",
-                         "sign-out": "http://localhost/amp/logout"
-                       },
-                       "authorizationFallbackResponse": {
-                           "access": false,
-                            "error": true,
-                            "loggedIn": false,
-                            "powerUser": false
-                       }
-                   }
-               </script>
+<!-- Temporary disabled due to CORS issue -->
+<!--
+    <script id="amp-access" type="application/json">
+        {
+           "authorization": "http://localhost/amp/auth/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
+           "pingback": "http://localhost/amp/auth/?rid=READER_ID&url=CANONICAL_URL&ref=DOCUMENT_REFERRER&_=RANDOM",
+           "authorizationFallbackResponse": {
+               "access": false,
+                "error": true,
+                "loggedIn": false,
+                "powerUser": false
+           }
+       }
+   </script>
+-->
     <title>Home</title>
     <link rel="canonical" href="https://amp.dev/ja/documentation/guides-and-tutorials/start/create/basic_markup/">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "NewsArticle",
-            "headline": "Open-source framework for publishing content",
-            "datePublished": "2015-10-07T12:02:41Z",
-            "image": [
-                "logo.jpg"
-            ]
-        }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-
-    <style amp-custom>
-
-
-@font-face {
-  font-family: ATsackers;
-  src: url("/fonts/SackersGothicStd-Medium.otf") format("opentype");
-  font-display: block;
-}
-@font-face {
-  font-family: Avenir;
-  src: url("/fonts/AvenirLTPro-Book.ttf") format("truetype");
-  font-display: block;
-}
-@font-face {
-            font-family: AvenirBold;
-            src: url("/fonts/AvenirLTPro-Black.ttf") format("truetype");
-            font-display: block;
-          }
-          .avenirbold {
-            font-family: 'AvenirBold', serif;
-            letter-spacing: .1em;
-            text-transform: initial;
-           }
-
-
-        .dots {
-          position: absolute;
-          display: flex;
-          justify-content: flex-end;
-          bottom: 20px;
-          right: 8px;
-        }
-        .dot {
-          height: 10px;
-          width: 10px;
-          margin: 0 10px;
-          border-radius: 50%;
-          display: inline-block;
-        }
-        .hero {
-          height: 550px;
-        }
-        .hero_image {
-          height: 550px;        
-        }
-
-  
-    </style>
 
 </head>
 <body>
 <main>
-
-  <!--
+<!--
     3)  Sign Up/Login
 -->
-
-
 <!--
 d)  Accordion 
 -->
@@ -126,14 +62,27 @@ d)  Accordion 
     </div>
   </section>
 </amp-accordion>
-
+<!-- Temporary disabled due to CORS issue -->
+<!--
 <section amp-access="loggedIn">
     <a href="profile.html">Profile</a>
 </section>
 <section amp-access="NOT loggedIn">
     <a href="login.html">Log in</a>
 </section>
-<!--
+-->
+<!-- Temporary implementation due to CORS issue -->
+<div id="login_user"></div>
+<script>
+if(localStorage.getItem('loggedIn')){
+    document.getElementById("login_user").innerHTML = '<p><a href="profile.html">Profile</a></p>';
+}else{
+    document.getElementById("login_user").innerHTML = '<p><a href="login.html">Log in</a></p>';
+}
+
+</script>
+
+    <!--
 b, c)  Text: Use flex boxes
 -->
 <!--
@@ -153,18 +102,19 @@ a)  Hero Carousel
   type="slides"
   autoplay
   delay="7000"><!-- Speed -->
-  <amp-img src="images/WW-19-VES-THUMB-AURA-GOLD.jpg">
+  <amp-img layout="responsive" width="400" height="300" src="images/WW-19-VES-THUMB-AURA-GOLD.jpg">
     <div class="atsackers">THUMB AURA GOLD
     </div>
-    </amp-img>
-  <amp-img src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg">
+  </amp-img>
+  <amp-img layout="responsive" width="400" height="300" src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg">
     <div class="atsackers">WW VES THUMB AURA MATTE BLACK
     </div>
     </amp-img>
-  <amp-img src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg">
+  <amp-img layout="responsive" width="400" height="300" src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg">
     <div class=d"atsackers">WW VESSELS THUMB CERAMIC TERRAIN
     </div>
     </amp-img>
+
 </amp-carousel>
 
 <!--
@@ -176,7 +126,7 @@ b, c)  Image: Use flex boxes
         height="160"
         layout="responsive"
         alt="an image">
-></amp-img>
+</amp-img>
 
 </main>
 </body>
