@@ -15,6 +15,15 @@
     <!-- amp-img -->
     <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+
+
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+    <script async custom-element="amp-lightbox-gallery" src="https://cdn.ampproject.org/v0/amp-lightbox-gallery-0.1.js"></script>
+
+
+
+
+
 <!-- Temporary disabled due to CORS issue -->
 <!--
     <script id="amp-access" type="application/json">
@@ -98,28 +107,75 @@ b, c)  Text: Use flex boxes
 <!--
 a)  Hero Carousel
 -->
+<!--
 <amp-carousel width="400"
   height="300"
   layout="responsive"
   type="slides"
   autoplay
-  delay="7000"><!-- Speed -->
+  delay="7000">
+
   <amp-img layout="responsive" width="400" height="300" src="images/WW-19-VES-THUMB-AURA-GOLD.jpg">
-    <div class="atsackers">THUMB AURA GOLD
-    </div>
+    <div class="atsackers">THUMB AURA GOLD</div>
   </amp-img>
+
   <amp-img layout="responsive" width="400" height="300" src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg">
-    <div class="atsackers">WW VES THUMB AURA MATTE BLACK
-    </div>
+    <div class="atsackers">WW VES THUMB AURA MATTE BLACK</div>
     </amp-img>
   <amp-img layout="responsive" width="400" height="300" src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg">
-    <div class=d"atsackers">WW VESSELS THUMB CERAMIC TERRAIN
-    </div>
+    <div class=d"atsackers">WW VESSELS THUMB CERAMIC TERRAIN</div>
     </amp-img>
 
 </amp-carousel>
+-->
 
-<!--
+
+<amp-carousel class="carousel1"
+  layout="responsive"
+  height="450"
+  width="500"
+  type="slides"
+  autoplay
+  delay="7000"
+>
+  <div class="slide">
+    <amp-img src="images/WW-19-VES-THUMB-AURA-GOLD.jpg"
+      layout="responsive"
+      width="500"
+      height="300"
+      alt="Border Collie"></amp-img>
+    <amp-fit-text layout="responsive"
+      width="500"
+      height="100"> THUMB AURA GOLD </amp-fit-text>
+  </div>
+
+  <div class="slide">
+    <amp-img src="images/WW-VES-THUMB-AURA-MATTE-BLACK.jpg"
+      layout="responsive"
+      width="500"
+      height="300"
+      alt="Shetland Sheepdog"></amp-img>
+    <amp-fit-text layout="responsive"
+      width="500"
+      height="100"> WW VES THUMB AURA MATTE BLACK</amp-fit-text>
+  </div>
+  <div class="slide">
+    <amp-img src="images/WW-VESSELS-THUMB-CERAMIC-TERRAIN.jpg"
+      layout="responsive"
+      width="500"
+      height="300"
+      height="300"
+      alt="Hovawart"></amp-img>
+    <amp-fit-text layout="responsive"
+      width="500"
+      height="100">
+      WW VESSELS THUMB CERAMIC TERRAIN
+    </amp-fit-text>
+  </div>
+</amp-carousel>
+
+
+    <!--
 b, c)  Image: Use flex boxes
 -->
 <amp-img
